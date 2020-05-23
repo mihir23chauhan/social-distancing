@@ -122,7 +122,7 @@ while True:
         cv2.imshow('Social distancing analyser',frame)
         cv2.waitKey(1)
     
-    if writer is True:
+    if writer is None:
         fourcc=cv2.VideoWriter_fourcc(*"MJPG")
         writer= cv2.VideoWriter("o.mp4",fourcc,30,(frame.shape[1],frame.shape[0]),True)
     writer.write(frame)
